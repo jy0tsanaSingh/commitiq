@@ -9,8 +9,9 @@ risks, and tells you where execution is breaking down — before it's too late.
 ---
 
 ## 🚀 Live Demo
-- **API Docs:** Coming soon
-- **Dashboard:** Coming soon
+- **API Docs:** https://commitiq-api-b3c2.onrender.com/docs
+- **Dashboard:** Coming soon (Streamlit Cloud)
+```
 
 ---
 
