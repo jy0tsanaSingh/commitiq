@@ -1,0 +1,9 @@
+Q3 Product Planning Meeting — February 2024
+Attendees: Abhishek, Geetu, Rishabh, Priya
+
+Abhishek confirmed he will complete the API documentation by next Friday.
+Geetu mentioned she needs to review the marketing budget but wasn't sure when.
+The team agreed someone should follow up with the client about the project delay next week but no one was assigned.
+Rishabh committed to deploying the staging environment by end of day tomorrow.
+Priya will schedule the design review session by Wednesday.
+No one was assigned to write the release notes — it was left open.
