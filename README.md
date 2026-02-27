@@ -8,10 +8,15 @@ risks, and tells you where execution is breaking down — before it's too late.
 
 ---
 
+## 🎥 Demo
+[![CommitIQ Demo](https://img.youtube.com/vi/NWBih731XAw/0.jpg)](https://youtu.be/NWBih731XAw)
+
+---
+
 ## 🚀 Live Demo
-- **API Docs:** https://commitiq-api-b3c2.onrender.com/docs
-- **Dashboard:** Coming soon (Streamlit Cloud)
-```
+- **Demo Video:** [Watch 2-minute demo](https://youtu.be/NWBih731XAw)
+- **API Docs:** Coming soon
+- **Dashboard:** Coming soon
 
 ---
 
@@ -115,7 +120,7 @@ JSON Response + Streamlit Dashboard
     },
     {
       "type": "repeated_topic",
-      "insight": "'API migration' appeared in 3 previous meetings without resolution",
+      "insight": "'API documentation' appeared in 2 meetings without resolution",
       "severity": "high"
     }
   ]
@@ -236,5 +241,7 @@ commitiq/
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/jyotsana-singh-46b33791/)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-black)](https://github.com/jy0tsanaSingh)
-```
 
+
+BackendEngineering 
+#LLM #VectorDatabase #OpenAI #MachineLearning #OpenToWork
