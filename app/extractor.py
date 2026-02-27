@@ -13,7 +13,7 @@ llm = ChatOpenAI(
     temperature=0
 )
 
-# Output parser tied to our Pydantic schema
+# Output parser
 parser = JsonOutputParser(pydantic_object=ExtractionResult)
 
 # The prompt
@@ -24,20 +24,13 @@ prompt = ChatPromptTemplate.from_messages([
 
 Extract every commitment, action item, or promise made in the transcript.
 
-For each commitment return:
-- task: what needs to be done (clear, specific string)
-- owner: person responsible (null if not mentioned)
-- deadline: due date as string like "2024-02-15" or "next Friday" (null if not mentioned)
-- priority: "high", "medium", or "low" based on context
-- is_vague: true if the commitment is unclear or has no specific action
-
 Return ONLY valid JSON matching this format:
 {{
   "commitments": [
     {{
       "task": "string",
       "owner": "string or null",
-      "deadline": "string or null", 
+      "deadline": "string or null",
       "priority": "high|medium|low",
       "is_vague": true or false
     }}
@@ -50,15 +43,11 @@ Return ONLY valid JSON matching this format:
     )
 ])
 
-# The chain — this is LangChain LCEL syntax
+# LangChain LCEL chain
 extraction_chain = prompt | llm | parser
 
 
 def extract_commitments(transcript: str) -> List[Commitment]:
-    """
-    Takes raw transcript text.
-    Returns list of structured Commitment objects.
-    """
     result = extraction_chain.invoke({"transcript": transcript})
     commitments = [Commitment(**c) for c in result["commitments"]]
     return commitments
