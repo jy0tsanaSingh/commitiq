@@ -17,8 +17,7 @@ import uuid
 
 router = APIRouter()
 
-llm = ChatOpenAI(api_key=OPENAI_API_KEY, model=MODEL_NAME, temperature=0)
-
+llm = ChatOpenAI(model=MODEL_NAME, temperature=0)
 
 # ─── Ingest Meeting ───────────────────────────────────────────
 

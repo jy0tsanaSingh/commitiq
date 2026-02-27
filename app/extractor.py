@@ -1,28 +1,22 @@
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
-from app.config import OPENAI_API_KEY, MODEL_NAME
+from app.config import MODEL_NAME
 from app.schemas import ExtractionResult, Commitment
 from typing import List
 
-
-# Initialize the LLM
+# No api_key parameter — reads from environment variable automatically
 llm = ChatOpenAI(
-    api_key=OPENAI_API_KEY,
     model=MODEL_NAME,
     temperature=0
 )
 
-# Output parser
 parser = JsonOutputParser(pydantic_object=ExtractionResult)
 
-# The prompt
 prompt = ChatPromptTemplate.from_messages([
     (
         "system",
         """You are an expert at extracting commitments from meeting transcripts.
-
-Extract every commitment, action item, or promise made in the transcript.
 
 Return ONLY valid JSON matching this format:
 {{
@@ -43,7 +37,6 @@ Return ONLY valid JSON matching this format:
     )
 ])
 
-# LangChain LCEL chain
 extraction_chain = prompt | llm | parser
 
 
