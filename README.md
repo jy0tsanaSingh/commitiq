@@ -15,8 +15,10 @@ risks, and tells you where execution is breaking down — before it's too late.
 
 ## 🚀 Live Demo
 - **Demo Video:** [Watch 2-minute demo](https://youtu.be/NWBih731XAw)
-- **API Docs:** Coming soon
+- **API Docs:** [https://commitiq-api-txrx.onrender.com/docs](https://commitiq-api-txrx.onrender.com/docs)
 - **Dashboard:** Coming soon
+
+> ⚡ Note: Free tier API may take 50 seconds to wake up on first request.
 
 ---
 
