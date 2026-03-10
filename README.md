@@ -181,6 +181,10 @@ OPENAI_API_KEY=your_openai_key_here
 ```bash
 uvicorn app.main:app --reload
 ```
+or 
+```bash
+python -m uvicorn app.main:app --reload
+```
 
 **6. Open API docs**
 ```
@@ -191,7 +195,9 @@ http://127.0.0.1:8000/docs
 ```bash
 streamlit run dashboard.py
 ```
-
+or 
+```bash
+python -m streamlit run dashboard.py
 ---
 
 ## 🧪 Running Tests
